@@ -140,7 +140,7 @@ called "pallets". At the heart of FRAME is a helpful
 create pallets and flexibly compose them to create blockchains that can address
 [a variety of needs](https://www.substrate.io/substrate-users/).
 
-Review the [FRAME runtime implementation](./runtime/src/lib.rs) included in this template and note
+Review the [FRAME runtime implementation](substrate-node-template/chain/runtime/src/lib.rs) included in this template and note
 the following:
 
 -   This file configures several pallets to include in the runtime. Each pallet configuration is
@@ -155,7 +155,7 @@ the following:
 
 The runtime in this project is constructed using many FRAME pallets that ship with the
 [core Substrate repository](https://github.com/paritytech/substrate/tree/master/frame) and a
-template pallet that is [defined in the `pallets`](./pallets/template/src/lib.rs) directory.
+template pallet that is [defined in the `pallets`](substrate-node-template/chain/pallets/template/src/lib.rs) directory.
 
 A FRAME pallet is compromised of a number of blockchain primitives:
 

@@ -1,0 +1,13 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cargo_runtime": "cd ./chain && cargo build --release -p node-template-runtime"
+    },
+  "author": "Zababurin Sergey",
+  "license": "GPL-3.0-or-later",
+  "dependencies": { },
+  "devDependencies": { }
+}

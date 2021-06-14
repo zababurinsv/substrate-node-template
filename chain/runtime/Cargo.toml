@@ -46,7 +46,8 @@ sp-transaction-pool = {default-features = false, version = '3.0.0', git = 'https
 sp-version = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 
 # local dependencies
-pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template' }
+#pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template' }
+pallet-donation = {default-features = false, version = '3.0.0', path = '../pallets/donation' }
 
 [features]
 default = ['std']
@@ -57,11 +58,12 @@ runtime-benchmarks = [
 	'frame-system/runtime-benchmarks',
 	'hex-literal',
 	'pallet-balances/runtime-benchmarks',
-	'pallet-template/runtime-benchmarks',
+	'pallet-donation/runtime-benchmarks',
 	'pallet-timestamp/runtime-benchmarks',
 	'sp-runtime/runtime-benchmarks',
 ]
 std = [
+	'pallet-donation/std',
 	'codec/std',
 	'frame-executive/std',
 	'frame-support/std',
@@ -72,7 +74,6 @@ std = [
 	'pallet-grandpa/std',
 	'pallet-randomness-collective-flip/std',
 	'pallet-sudo/std',
-	'pallet-template/std',
 	'pallet-timestamp/std',
 	'pallet-transaction-payment-rpc-runtime-api/std',
 	'pallet-transaction-payment/std',

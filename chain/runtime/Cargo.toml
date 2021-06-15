@@ -13,6 +13,12 @@ targets = ['x86_64-unknown-linux-gnu']
 [build-dependencies]
 substrate-wasm-builder={version = '4.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 
+#[dependencies.product-tracking]
+#default-features = false
+#package = 'pallet-product-tracking'
+#path = '../pallets/product-tracking'
+#version = '3.0.0'
+
 [dependencies]
 # external dependencies
 codec = {default-features = false, features = ['derive'], package = 'parity-scale-codec', version = '2.0.0'}
@@ -48,6 +54,9 @@ sp-version = {default-features = false, version = '3.0.0', git = 'https://github
 # local dependencies
 #pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template' }
 pallet-donation = {default-features = false, version = '3.0.0', path = '../pallets/donation' }
+pallet-scheduler = {default-features = false, version = '3.0.0', path = '../pallets/scheduler' }
+
+
 
 [features]
 default = ['std']
@@ -64,6 +73,7 @@ runtime-benchmarks = [
 ]
 std = [
 	'pallet-donation/std',
+	'pallet-scheduler/std',
 	'codec/std',
 	'frame-executive/std',
 	'frame-support/std',

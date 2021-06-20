@@ -16,7 +16,7 @@ pub type ChainSpec = sc_service::GenericChainSpec<GenesisConfig>;
 
 /// Generate a crypto pair from seed.
 pub fn get_from_seed<TPublic: Public>(seed: &str) -> <TPublic::Pair as Pair>::Public {
-	TPublic::Pair::from_string(&format!("//{}", seed), None)
+	TPublic::Pair::from_string(&format!("{}", seed), None)
 		.expect("static values are valid; qed")
 		.public()
 }
@@ -51,16 +51,17 @@ pub fn development_config() -> Result<ChainSpec, String> {
 			wasm_binary,
 			// Initial PoA authorities
 			vec![
-				authority_keys_from_seed("Alice"),
+				authority_keys_from_seed("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
+				authority_keys_from_seed("stock expose client flip key horror credit can pepper option delay pen"),
 			],
 			// Sudo account
-			get_account_id_from_seed::<sr25519::Public>("Alice"),
+			get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
 			// Pre-funded accounts
 			vec![
-				get_account_id_from_seed::<sr25519::Public>("Alice"),
-				get_account_id_from_seed::<sr25519::Public>("Bob"),
 				get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
 				get_account_id_from_seed::<sr25519::Public>("stock expose client flip key horror credit can pepper option delay pen"),
+				// get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
+				// get_account_id_from_seed::<sr25519::Public>("stock expose client flip key horror credit can pepper option delay pen"),
 			],
 			true,
 		),
@@ -90,25 +91,15 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 			wasm_binary,
 			// Initial PoA authorities
 			vec![
-				authority_keys_from_seed("Alice"),
-				authority_keys_from_seed("Bob"),
+				authority_keys_from_seed("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
+				authority_keys_from_seed("stock expose client flip key horror credit can pepper option delay pen"),
 			],
 			// Sudo account
-			get_account_id_from_seed::<sr25519::Public>("Alice"),
+			get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
 			// Pre-funded accounts
 			vec![
-				get_account_id_from_seed::<sr25519::Public>("Alice"),
-				get_account_id_from_seed::<sr25519::Public>("Bob"),
-				get_account_id_from_seed::<sr25519::Public>("Charlie"),
-				get_account_id_from_seed::<sr25519::Public>("Dave"),
-				get_account_id_from_seed::<sr25519::Public>("Eve"),
-				get_account_id_from_seed::<sr25519::Public>("Ferdie"),
-				get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
-				get_account_id_from_seed::<sr25519::Public>("Bob//stash"),
-				get_account_id_from_seed::<sr25519::Public>("Charlie//stash"),
-				get_account_id_from_seed::<sr25519::Public>("Dave//stash"),
-				get_account_id_from_seed::<sr25519::Public>("Eve//stash"),
-				get_account_id_from_seed::<sr25519::Public>("Ferdie//stash"),
+				get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
+				get_account_id_from_seed::<sr25519::Public>("stock expose client flip key horror credit can pepper option delay pen"),
 			],
 			true,
 		),

@@ -32,7 +32,6 @@ frame-system = {default-features = false, version = '3.0.0', git = 'https://gith
 frame-system-benchmarking = {default-features = false, optional = true, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 frame-system-rpc-runtime-api = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 pallet-aura = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
-pallet-balances = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 pallet-grandpa = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 pallet-randomness-collective-flip = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 pallet-sudo = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
@@ -52,11 +51,10 @@ sp-transaction-pool = {default-features = false, version = '3.0.0', git = 'https
 sp-version = {default-features = false, version = '3.0.0', git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-05'}
 
 # local dependencies
-#pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template' }
+# pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template' }
 pallet-donation = {default-features = false, version = '3.0.0', path = '../pallets/donation' }
 pallet-scheduler = {default-features = false, version = '3.0.0', path = '../pallets/scheduler' }
-
-
+pallet-balances = {default-features = false, version = '3.0.0', path = '../pallets/balances' }
 
 [features]
 default = ['std']

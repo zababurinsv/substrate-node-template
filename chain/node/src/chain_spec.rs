@@ -63,8 +63,6 @@ pub fn development_config() -> Result<ChainSpec, String> {
 			get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
 			// Pre-funded accounts
 			vec![
-				get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
-				get_account_id_from_seed::<sr25519::Public>("stock expose client flip key horror credit can pepper option delay pen"),
 				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
 				get_account_id_from_seed::<sr25519::Public>("Bob"),
@@ -109,8 +107,6 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 			get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
 			// Pre-funded accounts
 			vec![
-				get_account_id_from_seed::<sr25519::Public>("knock version stumble fox stable sing forum blush unknown capital marble evidence"),
-				get_account_id_from_seed::<sr25519::Public>("stock expose client flip key horror credit can pepper option delay pen"),
 				get_account_id_from_seed::<sr25519::Public>("Alice"),
 				get_account_id_from_seed::<sr25519::Public>("Alice//stash"),
 				get_account_id_from_seed::<sr25519::Public>("Bob"),
